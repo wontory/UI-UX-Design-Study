@@ -1,13 +1,57 @@
-body { background: #dee1e2; }
-
-.pop {
-    border-radius: 50px;
+body {
     background: #dee1e2;
-    box-shadow:  20px 20px 60px #bdbfc0,
-                 -20px -20px 60px #ffffff;
+    margin: 100px 0px;
+}
+
+.flat {
+    background: #dee1e2;
+    box-shadow: 20px 20px 60px #bdbfc0,
+                -20px -20px 60px #ffffff;
+}
+
+.pressed {
+    background: #dee1e2;
+    box-shadow: inset 20px 20px 60px #bdbfc0,
+                inset -20px -20px 60px #ffffff;
 }
 
 .card {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
     width: 300px; height: 300px;
-    margin: 100px;
+    margin: 0 100px;
+}
+
+.small_card {
+    border-radius: 25px;
+    width: 200px; height: 200px;
+}
+
+.circle {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 150px;
+    width: 300px; height: 300px;
+    margin: 0 100px;
+}
+
+.small_circle {
+    border-radius: 100px;
+    width: 200px; height: 200px;
+}
+
+.text {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20em;
+    font-weight: 400;
+    color: #dee1e2;
+    text-transform: uppercase;
+    text-shadow: 18px 18px 55px #bdbfc0,
+                 -18px -18px 55px #ffffff;
+    margin: 0 100px;
 }
