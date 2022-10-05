@@ -14,6 +14,12 @@ body { background: #dee1e2; }
                 inset -20px -20px 60px #ffffff;
 }
 
+.convex {
+    background: linear-gradient(145deg, #eef1f2, #c8cbcb);
+    box-shadow:  20px 20px 60px #bdbfc0,
+             -20px -20px 60px #ffffff;
+}
+
 .highlight {
     background: #cde9f0;
 }
@@ -53,6 +59,17 @@ body { background: #dee1e2; }
     font-size: 20em;
     font-weight: 400;
     color: #dee1e2;
+    text-transform: uppercase;
+    text-shadow: 18px 18px 55px #bdbfc0,
+                 -18px -18px 55px #ffffff;
+    margin: 50px;
+}
+
+.convex_text {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20em;
+    font-weight: 400;
+    color: linear-gradient(145deg, #eef1f2, #c8cbcb);;
     text-transform: uppercase;
     text-shadow: 18px 18px 55px #bdbfc0,
                  -18px -18px 55px #ffffff;
