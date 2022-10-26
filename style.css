@@ -9,7 +9,7 @@
 
 html {
     background-color: #e0e0e0;
-    transition: all 0.5s ease-in;
+    transition: 0.5s;
 }
 
 html.dark {
@@ -67,6 +67,7 @@ body {
                 inset 4px 4px 8px #bebebe,
                 inset -4px -4px 8px #ffffff;
     background-color: #e0e0e0;
+    transition: 0.5s;
 }
 
 .toggle-slider.dark {
@@ -90,7 +91,7 @@ body {
                 -3px -3px 5px #ffffff;
     background-color: #e0e0e0;
     content: "";
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .toggle-slider.dark:before {
@@ -130,6 +131,7 @@ input:checked + .toggle-slider:before {
     background: #e0e0e0;
     box-shadow: 30px 30px 60px #bebebe, 
                 -30px -30px 60px #ffffff;
+    transition: 0.5s;
 }
 
 .clock-container.dark {
@@ -152,7 +154,7 @@ input:checked + .toggle-slider:before {
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
-    transition: all 0.5s ease-in;
+    transition: 0.5s;
 }
 
 .needle.hour {
@@ -214,6 +216,6 @@ input:checked + .toggle-slider:before {
     align-items: center;
     justify-content: center;
     line-height: 18px;
-    transition: all 0.5s ease-in;
+    transition: 0.5s;
     font-size: 12px;
 }
