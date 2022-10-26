@@ -8,7 +8,14 @@
     <title>Theme Clock</title>
 </head>
 <body>
-    <button class="toggle">Dark Mode</button>
+    <div class="toggle-container">
+        <label class="toggle-switch">
+            <input type="checkbox" class="toggle">
+            <span class="toggle-slider"></span>
+            <span class="toggle-dark">ON</span>
+            <span class="toggle-light">OFF</span>
+        </label>
+    </div>
     <div class="clock-container">
         <div class="clock">
             <div class="needle hour"></div>
@@ -19,6 +26,6 @@
         <div class="time"></div>
         <div class="date"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="clock.js"></script>
 </body>
 </html>

@@ -27,24 +27,96 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     overflow: hidden;
     margin: 0;
 }
 
-.toggle {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: 0;
-    border-radius: 4px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 100px;
+.toggle-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 10vh;
 }
 
-.toggle:focus {
-    outline: none;
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #bebebe,
+                -4px -4px 8px #ffffff,
+                inset 4px 4px 8px #bebebe,
+                inset -4px -4px 8px #ffffff;
+    background-color: #e0e0e0;
+}
+
+.toggle-slider.dark {
+    border-color: #3a3a3a;
+    background-color: #3a3a3a;
+    box-shadow: 4px 4px 8px #313131,
+                -4px -4px 8px #434343,
+                inset 4px 4px 8px #313131,
+                inset -4px -4px 8px #434343;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    z-index: 999;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #bebebe,
+                -3px -3px 5px #ffffff;
+    background-color: #e0e0e0;
+    content: "";
+    transition: .5s;
+}
+
+.toggle-slider.dark:before {
+    background-color: #3a3a3a;
+    box-shadow: 3px 3px 5px #313131,
+                -3px -3px 5px #434343;
+}
+
+.toggle-light {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    color: #3d3935;
+    font-size: .8125rem;
+}
+
+.toggle-dark {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: #f252a5;
+    font-size: .8125rem;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(33px);
 }
 
 .clock-container {

@@ -24,6 +24,15 @@ toggle.addEventListener('click', (e) => {
         clockContainer.classList.add('dark');
         e.target.innerHTML = 'Light Mode';
     }
+
+    const toggleSlider = document.querySelector('.toggle-slider');
+    if (toggleSlider.classList.contains('dark')) {
+        toggleSlider.classList.remove('dark');
+        e.target.innerHTML = 'Dark Mode';
+    } else {
+        toggleSlider.classList.add('dark');
+        e.target.innerHTML = 'Light Mode';
+    }
 })
 
 function setTime() {
