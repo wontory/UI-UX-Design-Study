@@ -20,7 +20,7 @@ function showList() {
     for (let i = 0; i < itemList.length; i++)
         list += `<li>${itemList[i]}<span class='close' id=${i}>\u00D7`
     list += "</ul>";
-    document.querySelector(".todo_items").innerHTML = list;
+    document.querySelector(".todo-items").innerHTML = list;
 
     let deleteButtons = document.querySelector(".close");
     for (let i = 0; i < deleteButtons.length; i++)
@@ -32,3 +32,9 @@ function deleteItem() {
     itemList.splice(id, 1);
     showList();
 }
+
+let checkList = document.querySelector(".todo-items");
+checkList.addEventListener('click', event => {
+    if (event.target.tagName === 'LI')
+        event.target.classList.toggle('checked');
+});
