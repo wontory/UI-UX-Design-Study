@@ -26,12 +26,17 @@ html.dark {
 
 body {
     font-family: 'Heebo', sans-serif;
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
     margin: 0;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .container {
@@ -39,21 +44,37 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 350px;
+    min-width: 350px;
+    min-height: 350px;
     border-radius: 50px;
     background: var(--neumo-color);
     box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
                 -30px -30px 60px var(--neumo-shadow-light);
     transition: 0.5s;
     margin: 35px;
+    padding: 30px;
+}
+
+.responsible-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    border-radius: 50px;
+    background: var(--neumo-color);
+    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
+                -30px -30px 60px var(--neumo-shadow-light);
+    transition: 0.5s;
+    margin: 35px;
+    padding: 30px;
 }
 
 .toggle {
     position: relative;
     display: inline-block;
-    width: 80px;
-    height: 40px;
+    min-width: 80px;
+    min-height: 40px;
     cursor: pointer;
 }
 
