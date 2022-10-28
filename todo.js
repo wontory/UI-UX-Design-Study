@@ -1,16 +1,16 @@
 'use strict';
 
 let itemList = [];
-let inputButton = document.querySelector(".inputButton");
+let inputButton = document.querySelector(".input-button");
 
 inputButton.addEventListener("click", addItem);
 
 function addItem() {
-    let item = document.querySelector(".todoInput").value;
-    if (item != null) {
+    let item = document.querySelector(".todo-item").value;
+    if (item != "") {
         itemList.push(item);
-        document.querySelector(".todoInput").value = "";
-        document.querySelector(".todoInput").focus();
+        document.querySelector(".todo-item").value = "TO-DO";
+        document.querySelector(".todo-item").focus();
     }
     showList();
 }
@@ -20,7 +20,7 @@ function showList() {
     for (let i = 0; i < itemList.length; i++)
         list += `<li>${itemList[i]}<span class='close' id=${i}>\u00D7`
     list += "</ul>";
-    document.querySelector(".todo-items").innerHTML = list;
+    document.querySelector(".todo-list").innerHTML = list;
 
     let deleteButtons = document.querySelector(".close");
     for (let i = 0; i < deleteButtons.length; i++)
@@ -33,7 +33,7 @@ function deleteItem() {
     showList();
 }
 
-let checkList = document.querySelector(".todo-items");
+let checkList = document.querySelector(".todo-list");
 checkList.addEventListener('click', event => {
     if (event.target.tagName === 'LI')
         event.target.classList.toggle('checked');

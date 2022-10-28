@@ -33,13 +33,13 @@ body {
     margin: 0;
 }
 
-.flex-box {
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
-.container {
+.flex-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,19 +55,8 @@ body {
     padding: 30px;
 }
 
-.responsible-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 350px;
-    border-radius: 50px;
-    background: var(--neumo-color);
-    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
-                -30px -30px 60px var(--neumo-shadow-light);
-    transition: 0.5s;
-    margin: 35px;
-    padding: 30px;
+.responsible {
+    min-height: 0px;
 }
 
 .toggle {
@@ -193,7 +182,7 @@ input:checked + .toggle-slider:before {
 }
 
 .date {
-    color: #aaa;
+    color: #888;
     font-size: 14px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
@@ -211,4 +200,56 @@ input:checked + .toggle-slider:before {
     line-height: 18px;
     transition: 0.5s;
     font-size: 12px;
+}
+
+.todo-input form {
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item {
+    width: 235px;
+    height: 40px;
+    border: 2px solid var(--neumo-color);
+    border-radius: 20px;
+    padding: 0 20px;
+    color: var(--primary-color);
+    box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
+                -4px -4px 8px var(--neumo-shadow-light),
+                inset 4px 4px 8px var(--neumo-shadow-dark),
+                inset -4px -4px 8px var(--neumo-shadow-light);
+    background-color: var(--neumo-color);
+    transition: 0.5s;
+}
+
+.input-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #888;
+    background: var(--neumo-color);
+    box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
+                -4px -4px 8px var(--neumo-shadow-light);
+    transition: 0.5s;
+}
+
+.todo-list ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.todo-list li {
+    width: 290px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    margin: 15px 0 0 0;
+    padding: 0 20px;
+    list-style-type: none;
+    box-shadow: inset 4px 4px 8px var(--neumo-shadow-dark),
+                inset -4px -4px 8px var(--neumo-shadow-light);
+    background-color: var(--neumo-color);
+    transition: 0.5s;
 }
