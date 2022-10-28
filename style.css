@@ -5,21 +5,23 @@
 :root {
     --primary-color: #000;
     --secondary-color: #fff;
+    --neumo-color: #e0e0e0;
+    --neumo-shadow-dark: #bebebe;
+    --neumo-shadow-light: #ffffff;
 }
 
 html {
-    background-color: #e0e0e0;
+    background-color: var(--neumo-color);
+    color: var(--primary-color);
     transition: 0.5s;
 }
 
 html.dark {
     --primary-color: #fff;
     --secondary-color: #333;
-}
-
-html.dark {
-    background-color: #3a3a3a;
-    color: var(--primary-color);
+    --neumo-color: #3a3a3a;
+    --neumo-shadow-dark: #313131;
+    --neumo-shadow-light: #434343;
 }
 
 body {
@@ -60,23 +62,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--neumo-color);
     border-radius: 20px;
-    box-shadow: 4px 4px 8px #bebebe,
-                -4px -4px 8px #ffffff,
-                inset 4px 4px 8px #bebebe,
-                inset -4px -4px 8px #ffffff;
-    background-color: #e0e0e0;
+    box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
+                -4px -4px 8px var(--neumo-shadow-light),
+                inset 4px 4px 8px var(--neumo-shadow-dark),
+                inset -4px -4px 8px var(--neumo-shadow-light);
+    background-color: var(--neumo-color);
     transition: 0.5s;
-}
-
-.toggle-slider.dark {
-    border-color: #3a3a3a;
-    background-color: #3a3a3a;
-    box-shadow: 4px 4px 8px #313131,
-                -4px -4px 8px #434343,
-                inset 4px 4px 8px #313131,
-                inset -4px -4px 8px #434343;
 }
 
 .toggle-slider:before {
@@ -87,17 +80,11 @@ body {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    box-shadow: 3px 3px 5px #bebebe,
-                -3px -3px 5px #ffffff;
-    background-color: #e0e0e0;
+    box-shadow: 3px 3px 5px var(--neumo-shadow-dark),
+                -3px -3px 5px var(--neumo-shadow-light);
+    background-color: var(--neumo-color);
     content: "";
     transition: 0.5s;
-}
-
-.toggle-slider.dark:before {
-    background-color: #3a3a3a;
-    box-shadow: 3px 3px 5px #313131,
-                -3px -3px 5px #434343;
 }
 
 .toggle-light {
@@ -128,17 +115,12 @@ input:checked + .toggle-slider:before {
     width: 350px;
     height: 350px;
     border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: 30px 30px 60px #bebebe, 
-                -30px -30px 60px #ffffff;
+    background: var(--neumo-color);
+    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
+                -30px -30px 60px var(--neumo-shadow-light);
     transition: 0.5s;
 }
 
-.clock-container.dark {
-    background: #3a3a3a;
-    box-shadow:  20px 20px 60px #313131,
-                 -20px -20px 60px #434343;
-}
 
 .clock {
     position: relative;
