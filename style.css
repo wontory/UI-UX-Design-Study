@@ -179,6 +179,7 @@ input:checked + .toggle-slider:before {
 
 .time {
     font-size: 60px;
+    color: var(--primary-color);
 }
 
 .date {
@@ -251,5 +252,6 @@ input:checked + .toggle-slider:before {
     box-shadow: inset 4px 4px 8px var(--neumo-shadow-dark),
                 inset -4px -4px 8px var(--neumo-shadow-light);
     background-color: var(--neumo-color);
+    color: var(--primary-color);
     transition: 0.5s;
 }
