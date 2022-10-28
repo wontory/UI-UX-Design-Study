@@ -29,22 +29,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 100vh;
     overflow: hidden;
     margin: 0;
 }
 
-.toggle-container {
+.container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 10vh;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 50px;
+    background: var(--neumo-color);
+    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
+                -30px -30px 60px var(--neumo-shadow-light);
+    transition: 0.5s;
+    margin: 35px;
 }
 
-.toggle-switch {
+.toggle {
     position: relative;
     display: inline-block;
     width: 80px;
@@ -52,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-.toggle-switch input {
+.toggle input {
     display: none;
 }
 
@@ -106,21 +111,6 @@ body {
 input:checked + .toggle-slider:before {
     transform: translateX(33px);
 }
-
-.clock-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 350px;
-    border-radius: 50px;
-    background: var(--neumo-color);
-    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
-                -30px -30px 60px var(--neumo-shadow-light);
-    transition: 0.5s;
-}
-
 
 .clock {
     position: relative;

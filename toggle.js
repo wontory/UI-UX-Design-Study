@@ -1,4 +1,4 @@
-const toggle = document.querySelector('.toggle');
+const toggle = document.querySelector('.toggle-switch');
 
 toggle.addEventListener('click', (e) => {
     const html = document.querySelector('html');
