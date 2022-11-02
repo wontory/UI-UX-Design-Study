@@ -9,8 +9,8 @@ function addItem() {
     let item = document.querySelector(".todo-item input").value;
     if (item != "") {
         itemList.push(item);
-        document.querySelector(".todo-item").value = "TO-DO";
-        document.querySelector(".todo-item").focus();
+        document.querySelector(".todo-item input").value = "TO-DO";
+        document.querySelector(".todo-item input").focus();
     }
     showList();
 }
