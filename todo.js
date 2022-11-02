@@ -6,7 +6,7 @@ let inputButton = document.querySelector(".input-button");
 inputButton.addEventListener("click", addItem);
 
 function addItem() {
-    let item = document.querySelector(".todo-item").value;
+    let item = document.querySelector(".todo-item input").value;
     if (item != "") {
         itemList.push(item);
         document.querySelector(".todo-item").value = "TO-DO";

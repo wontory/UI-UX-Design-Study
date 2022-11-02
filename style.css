@@ -215,13 +215,20 @@ input:checked + .toggle-slider:before {
     border: 2px solid var(--neumo-color);
     border-radius: 20px;
     padding: 0 20px;
-    color: var(--primary-color);
     box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
                 -4px -4px 8px var(--neumo-shadow-light),
                 inset 4px 4px 8px var(--neumo-shadow-dark),
                 inset -4px -4px 8px var(--neumo-shadow-light);
     background-color: var(--neumo-color);
     transition: 0.5s;
+}
+
+.todo-item input {
+    width: 191px;
+    height: 36px;
+    border: none;
+    color: var(--primary-color);
+    background-color: #00ff0000;
 }
 
 .input-button {
@@ -234,6 +241,10 @@ input:checked + .toggle-slider:before {
     box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
                 -4px -4px 8px var(--neumo-shadow-light);
     transition: 0.5s;
+}
+
+.input-button:hover {
+    cursor: pointer;
 }
 
 .todo-list ul {
