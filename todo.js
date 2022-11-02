@@ -1,16 +1,21 @@
 'use strict';
 
 let itemList = [];
+let inputBox = document.querySelector("input[type='text']")
 let inputButton = document.querySelector(".input-button");
 
-inputButton.addEventListener("click", addItem);
+inputBox.addEventListener('keydown', event => {
+    if (event.keyCode === 13)
+        event.preventDefault();
+});
+inputButton.addEventListener('click', addItem);
 
 function addItem() {
-    let item = document.querySelector(".todo-item input").value;
-    if (item != "") {
-        itemList.push(item);
-        document.querySelector(".todo-item input").value = "TO-DO";
-        document.querySelector(".todo-item input").focus();
+    let item = document.querySelector(".todo-item input");
+    if (item.value != "") {
+        itemList.push(item.value);
+        item.value = "TO-DO";
+        item.focus();
     }
     showList();
 }

@@ -107,7 +107,7 @@ body {
     position: absolute;
     top: 14px;
     right: 12px;
-    color: #3d3935;
+    color: var(--primary-color);
     font-size: .8125rem;
 }
 
@@ -115,7 +115,7 @@ body {
     position: absolute;
     top: 14px;
     left: 14px;
-    color: #f252a5;
+    color: var(--primary-color);
     font-size: .8125rem;
 }
 
