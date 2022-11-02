@@ -214,7 +214,6 @@ input:checked + .toggle-slider:before {
     height: 40px;
     border: 2px solid var(--neumo-color);
     border-radius: 20px;
-    padding: 0 20px;
     box-shadow: 4px 4px 8px var(--neumo-shadow-dark),
                 -4px -4px 8px var(--neumo-shadow-light),
                 inset 4px 4px 8px var(--neumo-shadow-dark),
@@ -224,9 +223,11 @@ input:checked + .toggle-slider:before {
 }
 
 .todo-item input {
-    width: 191px;
+    width: 231px;
     height: 36px;
     border: none;
+    border-radius: 20px;
+    padding: 0 20px;
     color: var(--primary-color);
     background-color: #00ff0000;
 }
