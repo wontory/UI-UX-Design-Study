@@ -14,7 +14,7 @@ function addItem() {
     let item = document.querySelector(".todo-item input");
     if (item.value != "") {
         itemList.push(item.value);
-        item.value = "TO-DO";
+        item.value = "";
         item.focus();
     }
     showList();
