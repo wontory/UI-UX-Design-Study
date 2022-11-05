@@ -35,30 +35,17 @@ body {
     margin: 0;
 }
 
-.flex-container {
+nav {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.flex-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-width: 350px;
-    min-height: 350px;
-    border-radius: 50px;
-    background: var(--neumo-color);
-    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
-                -30px -30px 60px var(--neumo-shadow-light);
-    margin: 35px;
-    padding: 30px;
+    justify-content: space-around;
+    width: 100vh;
+    height: 80px;
 }
 
-.responsible {
-    min-height: 0px;
+.title {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .toggle {
@@ -117,6 +104,32 @@ body {
     left: 14px;
     color: var(--primary-color);
     font-size: .8125rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+    min-height: 350px;
+    border-radius: 50px;
+    background: var(--neumo-color);
+    box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
+                -30px -30px 60px var(--neumo-shadow-light);
+    margin: 35px;
+    padding: 30px;
+}
+
+.responsible {
+    min-height: 0px;
 }
 
 input:checked + .toggle-slider:before {
