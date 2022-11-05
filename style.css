@@ -206,7 +206,7 @@ input:checked + .toggle-slider:before {
     justify-content: space-between;
 }
 
-.todo-item {
+.todo-input-field {
     width: 235px;
     height: 40px;
     border: 2px solid var(--neumo-color);
@@ -218,7 +218,7 @@ input:checked + .toggle-slider:before {
     background-color: var(--neumo-color);
 }
 
-.todo-item input {
+.todo-input-field input {
     width: 231px;
     height: 36px;
     font-size: 1em;
