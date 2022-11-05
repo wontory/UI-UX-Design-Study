@@ -26,9 +26,10 @@ html.dark {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Heebo', sans-serif;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     overflow: scroll;
     margin: 0;
@@ -38,6 +39,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .flex-item {
