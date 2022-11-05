@@ -15,7 +15,7 @@ inputBox.addEventListener('keydown', event => {
 
 checkList.addEventListener('click', event => {
     if (event.target.tagName === 'LI')
-        event.target.classList.add('checked');
+        event.target.classList.toggle('checked');
 });
 
 function save(item) {
