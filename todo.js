@@ -33,14 +33,10 @@ function load() {
         const parsedJSON = JSON.parse(loadedJSON);
         for (let item of parsedJSON) {
             const { text } = item;
-            loadItem(text);
+            save(text);
         }
         showList();
     }
-}
-
-function loadItem(text) {
-    save(text);
 }
 
 inputButton.addEventListener('click', addItem);
