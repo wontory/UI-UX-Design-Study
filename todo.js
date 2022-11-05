@@ -4,7 +4,7 @@ let itemList = [];
 let inputBox = document.querySelector("input[type='text']")
 let inputButton = document.querySelector(".input-button");
 let checkList = document.querySelector(".todo-list");
-const TODOLIST = "toDoList7"
+const TODOLIST = "toDoList"
 
 load();
 
