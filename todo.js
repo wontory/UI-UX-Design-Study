@@ -14,14 +14,21 @@ inputBox.addEventListener('keydown', event => {
 });
 
 checkList.addEventListener('click', event => {
-    if (event.target.tagName === 'LI')
-        event.target.classList.toggle('checked');
+    const tar = event.target;
+    for (const i in itemList) {
+        if (itemList[i].id === parseInt(tar.id)) {
+            itemList[i].isDone = !itemList[i].isDone;
+            tar.classList.toggle("checked");
+        }
+    }
+    localStorage.setItem(TODOLIST, JSON.stringify(itemList));
 });
 
-function save(item) {
+function save(item, bool) {
     const itemObj = {
         text: item,
-        id: itemList.length + 1,
+        id: itemList.length,
+        isDone: bool,
     };
     itemList.push(itemObj);
     localStorage.setItem(TODOLIST, JSON.stringify(itemList));
@@ -33,7 +40,7 @@ function load() {
         const parsedJSON = JSON.parse(loadedJSON);
         for (let item of parsedJSON) {
             const { text } = item;
-            save(text);
+            save(text, item.isDone);
         }
         showList();
     }
@@ -43,7 +50,7 @@ inputButton.addEventListener('click', addItem);
 function addItem() {
     let item = document.querySelector(".todo-input-field input");
     if (item.value != "") {
-        save(item.value);
+        save(item.value, false);
         item.value = "";
         item.focus();
     }
@@ -53,7 +60,7 @@ function addItem() {
 function showList() {
     let list = "<ul>"
     for (let i = 0; i < itemList.length; i++)
-        list += `<li>${itemList[i].text}<span class='close' id=${i}><i class="fa-solid fa-xmark"></i>`
+        list += `<li id=${i} class=${itemList[i].isDone === true ? "checked" : ""}>${itemList[i].text}<span class='close' id=${i}><i class="fa-solid fa-xmark"></i>`
     list += "</ul>";
     document.querySelector(".todo-list").innerHTML = list;
 
