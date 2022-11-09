@@ -29,8 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Heebo', sans-serif;
-    align-items: center;
-    height: 100vh;
     overflow: scroll;
     margin: 0;
 }
@@ -108,14 +106,13 @@ nav {
     font-size: .8125rem;
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+.grid {
+    display: grid;
     justify-content: center;
+    min-height: 100vh;
 }
 
-.flex-item {
+.item {
     display: flex;
     flex-direction: column;
     justify-content: center;

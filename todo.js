@@ -67,6 +67,9 @@ function showList() {
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++)
         deleteButtons[i].addEventListener("click", deleteItem);
+    
+    var grid = document.querySelector('.grid');
+    waterfall(grid);
 }
 
 function deleteItem() {
