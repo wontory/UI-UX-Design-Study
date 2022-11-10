@@ -107,9 +107,7 @@ nav {
 }
 
 .grid {
-    display: grid;
-    justify-content: center;
-    min-height: 100vh;
+    padding-top: 35px;
 }
 
 .item {
@@ -123,7 +121,6 @@ nav {
     background: var(--neumo-color);
     box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
                 -30px -30px 60px var(--neumo-shadow-light);
-    margin: 35px;
     padding: 30px;
 }
 
