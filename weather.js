@@ -37,5 +37,6 @@ function getWeather(lat, lon){
         const img = json.weather[0].icon;
         weatherImg.innerHTML = `<img src="http://openweathermap.org/img/wn/${img}@2x.png" alt="Weather">`;
         weatherData.innerHTML = `${temparature} °C<br>${weather}<br>${place}`;
+        magicGrid.positionItems();
     });
 }
