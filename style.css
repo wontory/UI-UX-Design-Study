@@ -286,3 +286,7 @@ input:checked + .toggle-slider:before {
 .todo-list li.checked {
     text-decoration: line-through;
 }
+
+.weather {
+    color: var(--primary-color);
+}
