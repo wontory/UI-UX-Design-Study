@@ -288,5 +288,12 @@ input:checked + .toggle-slider:before {
 }
 
 .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--primary-color);
+}
+
+.weather-data {
+    text-align: center;
 }

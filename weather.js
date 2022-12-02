@@ -1,4 +1,5 @@
-const weather = document.querySelector('.weather');
+const weatherData = document.querySelector('.weather-data');
+const weatherImg = document.querySelector('.weather-image');
 
 askForCoords();
 
@@ -31,7 +32,10 @@ function getWeather(lat, lon){
     .then(function(json){
         console.log(json);
         const temparature = json.main.temp;
+        const weather = json.weather[0].main;
         const place = json.name;
-        weather.innerText = `${temparature} @${place}`;
+        const img = json.weather[0].icon;
+        weatherImg.innerHTML = `<img src="http://openweathermap.org/img/wn/${img}@4x.png" alt="Weather">`;
+        weatherData.innerHTML = `${temparature} °C<br>${weather}<br>${place}`;
     });
 }
