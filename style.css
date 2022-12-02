@@ -290,9 +290,9 @@ input:checked + .toggle-slider:before {
 .weather {
     display: flex;
     align-items: center;
-    color: var(--primary-color);
 }
 
 .weather-data {
     margin-right: 25px;
+    color: var(--primary-color);
 }
