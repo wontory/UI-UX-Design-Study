@@ -34,8 +34,9 @@ function getWeather(lat, lon){
         const temparature = json.main.temp;
         const weather = json.weather[0].main;
         const place = json.name;
-        const img = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+        const img = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
         weatherData.style.fontWeight = "600";
+        weatherData.style.marginRight = "25px";
         weatherData.style.textAlign = "left";
         weatherImg.innerHTML = `<img src="${img}">`;
         weatherData.innerHTML = `${temparature} °C<br>${weather}<br>${place}`;
