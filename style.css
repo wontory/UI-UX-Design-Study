@@ -2,6 +2,7 @@
     box-sizing: border-box;
     outline: none;
     transition: 0.5s;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -98,6 +99,8 @@ nav {
     right: 12px;
     color: var(--primary-color);
     font-size: .8125rem;
+    line-height: .8125rem;
+    font-weight: bold;
 }
 
 .toggle-dark {
@@ -106,6 +109,8 @@ nav {
     left: 14px;
     color: var(--primary-color);
     font-size: .8125rem;
+    line-height: .8125rem;
+    font-weight: bold;
 }
 
 .grid {
@@ -121,6 +126,7 @@ nav {
     min-height: 350px;
     border-radius: 50px;
     background: var(--neumo-color);
+    color: var(--primary-color);
     box-shadow: 30px 30px 60px var(--neumo-shadow-dark), 
                 -30px -30px 60px var(--neumo-shadow-light);
     padding: 30px;
