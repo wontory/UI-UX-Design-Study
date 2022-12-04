@@ -36,6 +36,8 @@ function getWeather(lat, lon){
         const place = json.name;
         const img = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
         weatherData.style.fontWeight = "600";
+        weatherData.style.marginRight = "25px";
+        weatherData.style.textAlign = "left";
         weatherImg.innerHTML = `<img src="${img}">`;
         weatherData.innerHTML = `${temparature} °C<br>${weather}<br>${place}`;
         magicGrid.positionItems();

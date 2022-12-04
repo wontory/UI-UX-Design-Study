@@ -296,6 +296,6 @@ input:checked + .toggle-slider:before {
 }
 
 .weather-data {
-    margin-right: 25px;
+    text-align: center;
     color: var(--primary-color);
 }
